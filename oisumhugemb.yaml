@@ -18,7 +18,7 @@ contexts_joiner:
 chat_engine:
   llm: openai #use "dkubex" for dkubex deployments
   url: ""
-  llmkey: "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"
+  llmkey: "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"
   window_size: 2
   max_tokens: 1024
 tracking:
