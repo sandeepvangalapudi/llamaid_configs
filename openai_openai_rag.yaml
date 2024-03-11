@@ -6,7 +6,7 @@ vectorstore_retriever:
   provider: dkubex
   embedding_class: OpenAIEmbedding
   embedding_model: "text-embedding-ada-002"
-  llmkey: "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"
+  llmkey: ""
   textkey: 'paperchunks'
   top_k: 3
 prompt_builder:
@@ -22,7 +22,7 @@ contexts_joiner:
 chat_engine:
   llm: openai #use "dkubex" for dkubex deployments
   url: ""
-  llmkey: "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"
+  llmkey: ""
   window_size: 2
   max_tokens: 1024
 tracking:
