@@ -16,9 +16,9 @@ nodes_sorter:
 contexts_joiner:
   separator: "\n\n"
 chat_engine:
-  llm: openai #use "dkubex" for dkubex deployments
+  llm: dkubex #use "dkubex" for dkubex deployments
   url: ""
-  llmkey: "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"
+  llmkey: ""
   window_size: 2
   max_tokens: 1024
 tracking:
