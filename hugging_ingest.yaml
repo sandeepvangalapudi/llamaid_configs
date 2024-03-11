@@ -22,6 +22,6 @@ reader:
   description: "https://llamahub.ai/l/file?from=loaders"
   inputs:
     loader_args:
-      input_dir: "/home/data/sandy/"
+      input_dir: "/home/Ingestion_documents/"
       recursive: true
       exclude_hidden: true
