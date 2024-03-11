@@ -5,7 +5,7 @@ splitter:
 embedder:
   class: OpenAIEmbedding
   model: 'text-embedding-ada-002'
-  llmkey: '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'
+  llmkey: ''
 metadata:
   class: DKubexFMMetadataExtractor
 vectorstore:
@@ -23,6 +23,6 @@ reader:
     description: 'https://llamahub.ai/l/file?from=loaders'
     inputs:
       loader_args:
-        input_dir: "/home/data/Ndadoc"
+        input_dir: "/home/data/"
         recursive: true
         exclude_hidden: true
