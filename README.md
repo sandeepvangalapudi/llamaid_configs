@@ -15,4 +15,10 @@ Based on your requirement you can edit the yaml file and deploy the securechat
 
 **hugging_Ingestion:** d3x dataset ingest -d <dataset_name> --config hugging_ingest.yaml
 
+**question mode**  d3x dataset query --dataset <dataset_name> --config <openai_summ_hugging_emb_rag.yaml> --question
+
+**batch mode** d3x dataset query --dataset <dataset_name> --config <openai_summ_hugging_emb_rag.yaml> -b<absolute_path_of_json>.
+
+**interactive**d3x dataset query --dataset <dataset_name> --config <openai_summ_hugging_emb_rag.yaml> -i.
+
 
