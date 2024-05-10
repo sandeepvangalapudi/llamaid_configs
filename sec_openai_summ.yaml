@@ -9,7 +9,7 @@ dockerpsw: "Portos@123"        #default=DOCKER_PASSWORD
 # publish: "true"                     #default="true"
 env:
   SECUREAPP_ACCESS_KEY: "allow"
-  FMQUERY_ARGS: "llm --dataset test1 --config /home/default/config/rag-config.yaml"
+  FMQUERY_ARGS: "openai --dataset test1 --config /home/default/config/rag-config.yaml"
 port: "3000"                        #default="8080"
 description: "App using config yaml" #default=""
 rewritetarget: "false"
