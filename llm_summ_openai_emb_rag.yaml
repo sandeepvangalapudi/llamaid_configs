@@ -3,7 +3,7 @@ input:
   mode: "cli"
 vectorstore_retriever:
   kind: weaviate
-  provider: dkubex
+  vectorstore_provider: dkubex
   embedding_class: OpenAIEmbedding
   embedding_model: "text-embedding-ada-002"
   llmkey: ""

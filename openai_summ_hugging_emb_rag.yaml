@@ -3,7 +3,7 @@ input:
   mode: ""
 vectorstore_retriever:
   kind: weaviate
-  provider: dkubex
+  vectorstore_provider: dkubex
   embedding_class: HuggingFaceEmbedding
   embedding_model: 'BAAI/bge-large-en-v1.5'
   textkey: 'paperchunks'
