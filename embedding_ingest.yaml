@@ -1,0 +1,29 @@
+splitter:
+   class: TokenTextSplitter
+   chunk_size: 512
+   chunk_overlap: 0
+embedder:
+   provider: dkubex
+   url: "http://bgelrg-serve-svc.nimesh-kathrotiya:8000/v1"
+   embkey: "abcdxyz"
+metadata:
+   class: DKubexFMMetadataExtractor
+vectorstore:
+   class: WeaviateVectorStore
+   provider: dkubex
+   uri: ""
+   textkey: 'paperchunks'
+docstore:
+   class: WeaviateDocumentStore
+   provider: dkubex
+   uri: ""
+   textkey: 'paperdocs'
+reader:
+ - source: file    # Can take pdf, txt, etc...
+   description: "https://llamahub.ai/l/file?from=loaders"
+   inputs:
+     loader_args:
+       input_dir: "/home/Ingestion_documents/"
+       recursive: true
+       exclude_hidden: true
+   #pyloader: /home/nimesh-kathrotiya/embdep/custom_sdr.py
