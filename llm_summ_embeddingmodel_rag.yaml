@@ -6,7 +6,7 @@ vectorstore_retriever:
   vectorstore_provider: dkubex
   embedding_provider: dkubex
   embedding_url: "http://bgelrg-serve-svc.nimesh-kathrotiya:8000/v1"
-  embedding_key: "abcdxyz
+  embedding_key: "abcdxyz"
   textkey: 'paperchunks'
   top_k: 3
 prompt_builder:
