@@ -24,3 +24,6 @@ chat_engine:
     max_tokens: 1024
 tracking:
   experiment: rag-contract
+securellm:
+  appkey: "" # SecureLLM key for models
+  dkubex_url: ""
