@@ -22,4 +22,4 @@ chat_engine:
   window_size: 2
   max_tokens: 1024
 tracking:
-  experiment: sandeep-rag
+  experiment: rag-contract
