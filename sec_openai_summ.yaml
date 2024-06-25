@@ -6,7 +6,7 @@ memory: 4                           #default= -1
 dockerserver: "DOCKER_SERVER"       #default=DOCKER_SERVER
 dockeruser: "docker123"           #default=DOCKER_USER
 dockerpsw: "Portos@123"        #default=DOCKER_PASSWORD
-publish: "true"                     #default="true"
+publish: "false"                     #default="true"
 env:
   SECUREAPP_ACCESS_KEY: "allow"
   FMQUERY_ARGS: "openai --dataset test1 --config /home/default/config/rag-config.yaml"
