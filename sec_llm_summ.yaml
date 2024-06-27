@@ -12,7 +12,7 @@ env:
   FMQUERY_ARGS: "llm --dataset test1 --config /home/default/config/rag-config.yaml"
 port: "3000"                        #default="8080"
 description: "App using config yaml" #default=""
-rewritetarget: "false"
+rewritetarget: "true"
 configsnippet: ""                   #default=""
 ingressprefix: "/chatbot"
 output: "yaml"
