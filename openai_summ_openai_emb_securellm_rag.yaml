@@ -26,7 +26,7 @@ chat_engine:
   window_size: 2
   max_tokens: 1024
 tracking:
-  experiment: sandy-oi-rag
+  experiment: openaiopenai
 securellm:
   appkey: "" # SecureLLM key for models
   dkubex_url: ""
