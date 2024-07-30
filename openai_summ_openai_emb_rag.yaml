@@ -1,29 +1,48 @@
-input:
-  question: ""
-  mode: "cli"
-vectorstore_retriever:
-  kind: weaviate
-  vectorstore_provider: dkubex
-  embedding_class: OpenAIEmbedding
-  embedding_model: "text-embedding-ada-002"
-  llmkey: ""
-  textkey: 'paperchunks'
-  top_k: 3
-prompt_builder:
-  prompt_str: ""
-  prompt_file: ""
-nodes_sorter:
-  max_sources: 3
-reranker:
-  model: 'BAAI/bge-reranker-large'
-  top_n: 3
-contexts_joiner:
-  separator: "\n\n"
-chat_engine:
-  llm: openai #use "dkubex" for dkubex deployments
-  url: ""
-  llmkey: ""
-  window_size: 2
+
+dataset: GI2_penniefaq
+# dataset: GI4_OAI_256
+vectorstore: weaviate_vectorstore
+embedding:  openai #openai  #dkubex #sky #huggingface  #openai
+search: vector_search
+synthesizer:
+  llm: openai
+  # llm_url: https://a591f010a8e184a7a97833e53e6642a4-1e8a9c2a4ed43993.elb.us-west-2.amazonaws.com/deployment/254/mistawq/
+  # llmkey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoibmltZXNoLWthdGhyb3RpeWEiLCJ0eXBlIjoiYXBpIiwiaWQiOiIvZGVwbG95bWVudC9taXN0YXdxLyJ9.vZz6l6TLnXA8r0ynaJ7SM3WJi4sJMzeHPfA1KEBtRM4
+  llm_url: http://34.221.113.109:30002/v1/
+  llmkey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoibmltZXNoLWthdGhyb3RpeWEiLCJ0eXBlIjoiYXBpIiwiaWQiOiIvZGVwbG95bWVudC9taXN0cmFsYXdxLyJ9.6-S-TNUeN2iuieUBXu0iAfEUeDJLl5xq3y0qLYN3PZY
+  prompt: default
   max_tokens: 1024
-tracking:
-  experiment: openaiopenai
+
+mlflow:
+  experiment: openaihuggrag
+
+openai:
+  model: 'text-embedding-ada-002'
+  llmkey: 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
+
+huggingface:
+  model: "BAAI/bge-large-en-v1.5"
+
+sky:
+  embedding_url: http://34.221.113.109:30001/v1/
+  embedding_key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoibmltZXNoLWthdGhyb3RpeWEiLCJ0eXBlIjoiYXBpIiwiaWQiOiIvZGVwbG95bWVudC9za3liZ2Vsci8ifQ.MfvtG74ToJcUUNTNNY12z2LQ6uyQBH2UCUTGIWSbvzg
+
+dkubex:
+  embedding_url: https://endurl
+  embedding_key: iwiaWQiOiIvZGVwbG95bWVudC9iZXNoLWthdGhyb3RpeWEiL1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoibmltZXNoLWthdGhyb3RpeWEiLCJ0eXBlIjoiYXBpIiwiaWQiOiIvZ
+
+vector_search:
+  top_k: 3
+  rerank: true
+  rerank_topk: 5
+  max_sources: 3
+
+weaviate_vectorstore:
+  vectorstore_provider: dkubex
+  url: ""
+  auth_key: ""
+  textkey: 'paperdocs'
+
+context_combiner:
+  use_adj_chunks: True #True #False
+  use_fourth_chunks: False  #True #False
