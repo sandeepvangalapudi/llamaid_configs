@@ -42,6 +42,6 @@ weaviate_vectorstore:
   auth_key: ""
   textkey: 'paperdocs'
 
-context_combiner:
-  use_adj_chunks: True #True #False
-  use_fourth_chunks: False  #True #False
+# context_combiner:
+#   use_adj_chunks: True #True #False
+#   use_fourth_chunks: False  #True #False
