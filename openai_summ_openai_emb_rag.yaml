@@ -18,7 +18,7 @@ mlflow:
 
 openai:
   model: 'text-embedding-ada-002'
-  llmkey: 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
+  llmkey: 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
 
 huggingface:
   model: "BAAI/bge-large-en-v1.5"
