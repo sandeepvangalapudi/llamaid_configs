@@ -14,7 +14,7 @@ synthesizer:
   max_tokens: 1024
 
 mlflow:
-  experiment: openaihuggrag
+  experiment: llmhugrag
 
 openai:
   model: 'text-embedding-ada-002'
