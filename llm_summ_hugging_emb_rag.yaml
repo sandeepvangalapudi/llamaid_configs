@@ -8,13 +8,13 @@ synthesizer:
   llm: dkubex
   # llm_url: https://a591f010a8e184a7a97833e53e6642a4-1e8a9c2a4ed43993.elb.us-west-2.amazonaws.com/deployment/254/mistawq/
   # llmkey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoibmltZXNoLWthdGhyb3RpeWEiLCJ0eXBlIjoiYXBpIiwiaWQiOiIvZGVwbG95bWVudC9taXN0YXdxLyJ9.vZz6l6TLnXA8r0ynaJ7SM3WJi4sJMzeHPfA1KEBtRM4
-  llm_url: http://34.221.113.109:30002/v1/
-  llmkey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoibmltZXNoLWthdGhyb3RpeWEiLCJ0eXBlIjoiYXBpIiwiaWQiOiIvZGVwbG95bWVudC9taXN0cmFsYXdxLyJ9.6-S-TNUeN2iuieUBXu0iAfEUeDJLl5xq3y0qLYN3PZY
+  llm_url: https://a591f010a8e184a7a97833e53e6642a4-1e8a9c2a4ed43993.elb.us-west-2.amazonaws.com/deployment/258/lama/
+  llmkey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoic2hydXRoaS1zcmVlIiwidHlwZSI6ImFwaSIsImlkIjoiL2RlcGxveW1lbnQvbGFtYS8ifQ.GVWlLuAaJABt18OI-18AB78t9K-7CxYNMALF9QvjFnY
   prompt: default
   max_tokens: 1024
 
 mlflow:
-  experiment: openaihuggrag
+  experiment: llmhugrag
 
 openai:
   model: 'text-embedding-ada-002'
@@ -44,5 +44,5 @@ weaviate_vectorstore:
   textkey: 'paperdocs'
 
 context_combiner:
-  use_adj_chunks: True #True #False
+  use_adj_chunks: False #True #False
   use_fourth_chunks: False  #True #False
