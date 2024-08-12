@@ -48,6 +48,6 @@ context_combiner:
   use_fourth_chunks: False  #True #False
 securellm:
   # appkey: "sk-aiglovq-63fezgq-vwotuwy-5awwkcy"
-  appkey: "sk-vmn5tvi-lrqu5ja-rfkuf3q-zabjzuy"  mistral-dkubex, bge-sky
+  appkey: "sk-vmn5tvi-lrqu5ja-rfkuf3q-zabjzuy"  #mistral-dkubex, bge-sky
   # appkey: "sk-q7etrga-rsiu6qq-x4bussq-rikdg4q"  # Mistral-awq-sky, bge-sky
   dkubex_url: "https://a591f010a8e184a7a97833e53e6642a4-1e8a9c2a4ed43993.elb.us-west-2.amazonaws.com/"
