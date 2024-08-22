@@ -18,14 +18,13 @@ openai:
   llmkey: "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"
 
 dkubex:
-  embkey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoicHJhbGhhZC1rb2xhbWJrYXIiLCJ0eXBlIjoiYXBpIiwiaWQiOiIvZGVwbG95bWVudC9iZ2VscnNreS8ifQ.xzY1oU9ig3wNjdIT9Xp1sZ1dyKbUOpMxYCwmYor5mJY
-  url: https://a591f010a8e184a7a97833e53e6642a4-1e8a9c2a4ed43993.elb.us-west-2.amazonaws.com/deployment/242/bgelrsky/
+  embedding_url: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoicHJhbGhhZC1rb2xhbWJrYXIiLCJ0eXBlIjoiYXBpIiwiaWQiOiIvZGVwbG95bWVudC9iZ2VscnNreS8ifQ.xzY1oU9ig3wNjdIT9Xp1sZ1dyKbUOpMxYCwmYor5mJY
+  embedding_key: https://a591f010a8e184a7a97833e53e6642a4-1e8a9c2a4ed43993.elb.us-west-2.amazonaws.com/deployment/242/bgelrsky/
   batch_size: 10
 
 sky:
-  model: bgelrsky
-  embkey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoibmltZXNoLWthdGhyb3RpeWEiLCJ0eXBlIjoiYXBpIiwiaWQiOiIvZGVwbG95bWVudC9iZ2Vza3kvIn0.dPcQ1iBGgw85xWx9FYxjQ8dlJ5v1FSfy2YTsI_1c5HM
-  url: http://44.193.76.252:30001/v1/
+  embedding_key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoibmltZXNoLWthdGhyb3RpeWEiLCJ0eXBlIjoiYXBpIiwiaWQiOiIvZGVwbG95bWVudC9iZ2Vza3kvIn0.dPcQ1iBGgw85xWx9FYxjQ8dlJ5v1FSfy2YTsI_1c5HM
+  embedding_url: http://44.193.76.252:30001/v1/
   batch_size: 10
 
 
