@@ -8,7 +8,7 @@ synthesizer:
   llm: openai
   # llm_url: https://a591f010a8e184a7a97833e53e6642a4-1e8a9c2a4ed43993.elb.us-west-2.amazonaws.com/deployment/254/mistawq/
   # llmkey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoibmltZXNoLWthdGhyb3RpeWEiLCJ0eXBlIjoiYXBpIiwiaWQiOiIvZGVwbG95bWVudC9taXN0YXdxLyJ9.vZz6l6TLnXA8r0ynaJ7SM3WJi4sJMzeHPfA1KEBtRM4
-  llm_url: http://34.221.113.109:30002/v1/
+  llm_url:
   llmkey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoibmltZXNoLWthdGhyb3RpeWEiLCJ0eXBlIjoiYXBpIiwiaWQiOiIvZGVwbG95bWVudC9taXN0cmFsYXdxLyJ9.6-S-TNUeN2iuieUBXu0iAfEUeDJLl5xq3y0qLYN3PZY
   prompt: default
   max_tokens: 1024
