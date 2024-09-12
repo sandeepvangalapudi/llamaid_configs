@@ -12,7 +12,7 @@ mlflow:
 huggingface:
   model: "BAAI/bge-large-en-v1.5"
 openai:
-  model: "text-embedding-ada-002"
+  embedding_model: "text-embedding-ada-002"
   llmkey: ""
 dkubex:
   embkey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoicHJhbGhhZC1rb2xhbWJrYXIiLCJ0eXBlIjoiYXBpIiwiaWQiOiIvZGVwbG95bWVudC9iZ2VscnNreS8ifQ.xzY1oU9ig3wNjdIT9Xp1sZ1dyKbUOpMxYCwmYor5mJY
