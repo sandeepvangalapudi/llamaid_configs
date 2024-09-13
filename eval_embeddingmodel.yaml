@@ -1,0 +1,71 @@
+dataset: BgeNdaSkyNew
+
+generate_ground_truth: true
+questions_generator:
+    prompt: "default"
+    num_questions_per_chunk: 1
+    max_chunks: 10     # Maximum number of chunks to be used for question generation
+    llm: openai
+    llmkey: "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"
+    llmurl: ""
+    max_tokens: 2048
+
+#ground_truth: "/home/ocdlgit/shashank/simple_15pos15neg_ground-truth.csv"
+# ground_truth: "/home/ocdlgit/shashank/simple_gi_nevada_ground-truth.csv"
+# ground_truth: "/home/ocdlgit/shashank/gi_nevada_ground-truth.csv"
+
+rag_configuration: "/home/data/rag_llm_embedding.yaml"
+
+vectorstore: weaviate_vectorstore
+weaviate_vectorstore:
+    url: ""
+    auth_key: ""
+    provider: dkubex
+    properties: 
+    - paperchunks
+    - dkubexfm
+
+evaluator:
+  - semantic_similarity_evaluator       # Vector Similarity
+  - correctness_evaluator               # LLM Similarity
+  - answer_relevancy_evaluator
+    #- retrieval_evaluator
+
+semantic_similarity_evaluator:
+    prompt: "default"
+    llm: dkubex #openai#dkubex
+    llm_url: "http://3.137.214.116:30001/v1/"
+    llmkey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoic2FuZGVlcC12YW5nYWxhcHVkaSIsInR5cGUiOiJhcGkiLCJpZCI6Ii9kZXBsb3ltZW50L2xsYW1za3kvIn0.qV4JvBfqo36V28cJNnbxUwdBTXa76IELM5wMdRJ1Izg"
+    max_tokens: 2048
+    metrics:
+    - similarity_score
+
+correctness_evaluator:
+    prompt: default
+    llm: dkubex  #openai # "dkubex" for dkubex deployments
+    llm_url: "http://3.147.28.230:30001/v1/"
+    llmkey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoic2FpLW5lcmFsbGEiLCJ0eXBlIjoiYXBpIiwiaWQiOiIvZGVwbG95bWVudC9sbGFtYXNreS8ifQ.-_9U3VqHipRocI41pUT_-cqP49Zqy5LyxL358Y87R_0"
+    max_tokens: 2048
+
+answer_relevancy_evaluator:
+    prompt: "default"
+    llm: dkubex #use "dkubex" for dkubex deployments
+    llm_url: "http://3.147.28.230:30001/v1/"
+    llmkey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoic2FpLW5lcmFsbGEiLCJ0eXBlIjoiYXBpIiwiaWQiOiIvZGVwbG95bWVudC9sbGFtYXNreS8ifQ.-_9U3VqHipRocI41pUT_-cqP49Zqy5LyxL358Y87R_0"
+    max_tokens: 2048
+
+retrieval_evaluator:
+    weaviate_vectorstore:
+        kind: weaviate
+        vectorstore_provider: dkubex
+        textkey: paperchunks
+        embedding_provider: sky
+        embedding_url: http://3.147.28.230:30002/v1/
+        embedding_key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoic2FpLW5lcmFsbGEiLCJ0eXBlIjoiYXBpIiwiaWQiOiIvZGVwbG95bWVudC9iZ2Vza3kvIn0.LzWwPsPtrgu5GQF0B-04lirL0-z695laKftKUN03PDo
+        similarity_top_k: 3
+    metrics:
+    - mrr
+    - hit_rate
+
+tracking:
+    experiment: Evaluate-custom
