@@ -26,7 +26,7 @@ sky:
 file:
   inputs:
     loader_args:
-      input_dir: /home/Ingestion_documents
+      input_dir: /home/data/Ingestion_documents
       recursive: true 
       exclude_hidden: true 
       raise_on_error: true 
