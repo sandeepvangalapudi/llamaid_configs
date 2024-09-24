@@ -29,7 +29,7 @@ evaluator:
   - semantic_similarity_evaluator       # Vector Similarity
   - correctness_evaluator               # LLM Similarity
   - answer_relevancy_evaluator
-    # retrieval_evaluator
+  - retrieval_evaluator
 
 semantic_similarity_evaluator:
     prompt: "default"
@@ -59,7 +59,7 @@ retrieval_evaluator:
         kind: weaviate
         vectorstore_provider: dkubex
         textkey: paperchunks
-        embedding_class: Op                    
+        embedding_class: OpenAIEmbedding                    
         embedding_model: "text-embedding-ada-002"           # Embedding model name
         llmkey: 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
         similarity_top_k: 3
