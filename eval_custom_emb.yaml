@@ -29,7 +29,7 @@ evaluator:
   - semantic_similarity_evaluator       # Vector Similarity
   - correctness_evaluator               # LLM Similarity
   - answer_relevancy_evaluator
-  - retrieval_evaluator
+  #- retrieval_evaluator
 
 semantic_similarity_evaluator:
     prompt: "default"
