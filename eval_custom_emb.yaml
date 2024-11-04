@@ -13,7 +13,7 @@ questions_generator:
 
 #ground_truth: "/home/ocdlgit/shashank/simple_15pos15neg_ground-truth.csv"
 # ground_truth: "/home/ocdlgit/shashank/simple_gi_nevada_ground-truth.csv"
-# ground_truth: "/home/ocdlgit/shashank/gi_nevada_ground-truth.csv"
+ground_truth: ""
 
 rag_configuration: "/home/data/rag_llm_embedding.yaml"
 
