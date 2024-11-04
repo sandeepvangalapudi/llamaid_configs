@@ -1,6 +1,7 @@
 dataset: BgeNdaSkyNew
 
 generate_ground_truth: true
+extract_ground_truth: false
 questions_generator:
     prompt: "default"
     num_questions_per_chunk: 1
