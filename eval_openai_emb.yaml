@@ -33,13 +33,9 @@ evaluator:
   #- retrieval_evaluator
 
 semantic_similarity_evaluator:
-    prompt: "default"
-    llm: dkubex #openai#dkubex
-    llm_url: "http://3.137.214.116:30001/v1/"
-    llmkey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoic2FuZGVlcC12YW5nYWxhcHVkaSIsInR5cGUiOiJhcGkiLCJpZCI6Ii9kZXBsb3ltZW50L2xsYW1za3kvIn0.qV4JvBfqo36V28cJNnbxUwdBTXa76IELM5wMdRJ1Izg"
-    max_tokens: 2048
-    metrics:
-    - similarity_score
+   prompt: "default"
+   metrics:
+   - similarity_score
 
 correctness_evaluator:
     prompt: default
