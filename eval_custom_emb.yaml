@@ -1,6 +1,7 @@
 dataset: BgeNdaSkyNew
 
 generate_ground_truth: true
+extract_ground_truth: false
 questions_generator:
     prompt: "default"
     num_questions_per_chunk: 1
@@ -12,7 +13,7 @@ questions_generator:
 
 #ground_truth: "/home/ocdlgit/shashank/simple_15pos15neg_ground-truth.csv"
 # ground_truth: "/home/ocdlgit/shashank/simple_gi_nevada_ground-truth.csv"
-# ground_truth: "/home/ocdlgit/shashank/gi_nevada_ground-truth.csv"
+ground_truth: ""
 
 rag_configuration: "/home/data/rag_llm_embedding.yaml"
 
@@ -29,7 +30,7 @@ evaluator:
   - semantic_similarity_evaluator       # Vector Similarity
   - correctness_evaluator               # LLM Similarity
   - answer_relevancy_evaluator
-    #- retrieval_evaluator
+  #- retrieval_evaluator
 
 semantic_similarity_evaluator:
     prompt: "default"
