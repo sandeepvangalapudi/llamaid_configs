@@ -12,6 +12,9 @@ synthesizer:
   llmkey:
   prompt: default
   max_tokens: 1024
+  
+parallel_query:
+  batch_size: 1
 
 mlflow:
   experiment: openaihuggrag
