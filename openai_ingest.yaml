@@ -4,6 +4,7 @@ metadata:
   - default
 reader:
   - file
+adjacent_chunks: false
 token_text_splitter:
   chunk_size: 256
   chunk_overlap: 0
