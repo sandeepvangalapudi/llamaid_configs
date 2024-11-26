@@ -2,6 +2,7 @@ splitter: token_text_splitter  #semantic_splitter
 embedding: dkubex   #opnenai,huggingface, sky,dkubex
 metadata:
   - default
+adjacent_chunks: false
 reader:
   - file
 token_text_splitter:
