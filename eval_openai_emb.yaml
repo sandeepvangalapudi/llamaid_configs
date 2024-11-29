@@ -43,6 +43,7 @@ correctness_evaluator:
     llm_url: "http://3.147.28.230:30001/v1/"
     llmkey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoic2FpLW5lcmFsbGEiLCJ0eXBlIjoiYXBpIiwiaWQiOiIvZGVwbG95bWVudC9sbGFtYXNreS8ifQ.-_9U3VqHipRocI41pUT_-cqP49Zqy5LyxL358Y87R_0"
     max_tokens: 2048
+    output_parser: default_parser
 
 answer_relevancy_evaluator:
     prompt: "default"
