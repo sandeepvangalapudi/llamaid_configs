@@ -60,13 +60,14 @@ retrieval_evaluator:
         kind: weaviate
         vectorstore_provider: dkubex
         textkey: paperchunks
-        embedding_provider: sky
-        embedding_url: http://3.147.28.230:30002/v1/
-        embedding_key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoic2FpLW5lcmFsbGEiLCJ0eXBlIjoiYXBpIiwiaWQiOiIvZGVwbG95bWVudC9iZ2Vza3kvIn0.LzWwPsPtrgu5GQF0B-04lirL0-z695laKftKUN03PDo
         similarity_top_k: 3
+    embedding_provider: dkubex
+    embedding_url: https://llamabot.ginicechat.com/deployment/published/bgekservegpu/v1/
+    embedding_key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoic2hhcm1pc3RoYS1jaG91ZGh1cnkiLCJ0eXBlIjoiYXBpIiwiaWQiOiIvZGVwbG95bWVudC9iZ2Vrc2VydmVncHUvIn0.a1zy2abmxA94QrqDWXTGm625jzP0OmrPgxUy1L9qnfA
     metrics:
     - mrr
     - hit_rate
+    calculate_doc_hit: "false" #"true"
 
 tracking:
     experiment: Evaluate-custom
