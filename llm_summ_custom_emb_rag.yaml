@@ -16,6 +16,9 @@ synthesizer:
 mlflow:
   experiment: openaihuggrag
 
+parallel_query:
+  batch_size: 1
+
 openai:
   model: 'text-embedding-ada-002'
   llmkey: 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
